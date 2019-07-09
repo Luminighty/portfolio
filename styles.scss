@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$font-default: 'Roboto', sans-serif;
+
+$breakpont-tablet: 800px;
+$breakpont-phone: 500px;
+
+$color-mail: #f17c7c;
+$color-linkedin: rgb(107, 196, 245);
+$color-github: #a163f1;
+$color-mail-hover: #ffb1ad;
+$color-linkedin-hover: #99feff;
+$color-github-hover: #d59bff;
+
+$nav-background: url("img/nav_bg.png");
+$nav-color: white;
+$nav-color-hover: #4301efba;
+$nav-color-shadow: #330b9a63;
+$nav-color-bg: #000020;
+$nav-width: 350px;
+
+$main-color: #310065;
+$main-color-bright: #901cbf;
+
+@mixin desktop {
+	@media screen and(min-width: $breakpont-tablet) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: $breakpont-phone) and (max-width: $breakpont-tablet) {
+		@content;
+	}
+}
+
+@mixin tabletOrDesktop {
+	@media screen and (min-width: $breakpont-phone) {
+		@content;
+	}
+}
+
+@mixin max-height($breakpoint) {
+	@media screen and (max-height: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin min-height($breakpoint) {
+	@media screen and (min-height: $breakpoint) {
+		@content;
+	}
+}
+@mixin phone {
+	@media screen and(max-width: $breakpont-phone+(-1)) {
+		@content;
+	}
+}
+@mixin notDesktop {
+	@media screen and(max-width: $breakpont-tablet+(-1)) {
+		@content;
+	}
+
+}
+
+@include desktop {
+	body {
+		background: linear-gradient(#ffffffdd, #ffffffdd), $nav-background;
+		background-attachment: fixed;
+		margin: 0px 0px 0px $nav-width;
+	}
+	.navigator {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: $nav-width;
+		bottom: 0px;
+		background: $nav-background;
+		background-attachment: fixed;
+		box-shadow: -2px 0 12px 12px $nav-color-shadow;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+
+	.menu {
+		a {
+			font-size: 1.2em;
+			display: block;
+			padding: 15px 50px;
+			text-align: left;
+		}
+	}
+
+	.contact {
+		font-size: 2em;
+		padding: 10px 0px;
+		text-align: center;
+		background-color: $nav-color-bg;
+		min-width: $nav-width;
+		max-width: $nav-width;
+		@include min-height(500px) {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+		}
+		margin-top: 5px;
+
+		a {
+			padding: 0px 10px;
+		}
+
+	}
+
+	.container {
+		padding: 10px 30px;
+		max-width: 1000px;
+		animation: containerShow 0.3s;
+		animation-timing-function: ease-out;
+		position: relative;
+	}
+
+}
+
+@keyframes containerShow {
+	from {opacity: 0; top: -40px}
+	to {opacity: 100%; top: 0px}
+}
+
+@keyframes appear-menu {
+	from {padding: 0; background-color: transparent; font-size: 1em;}
+}
+
+@include tablet {
+
+}
+
+@include tabletOrDesktop {
+
+	.column {
+		* {
+			width: 100%;
+		}
+	}
+
+	.column.left-column {
+		float: left;
+		width: 48%;
+	}
+	.column.right-column {
+		float: right;
+		width: 48%;
+	}
+	  
+	.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	}
+
+
+}
+
+@include notDesktop {
+	body {
+		margin: 0px;
+	}
+	.navigator {
+		width: 100%;
+		background: $nav-color-bg;
+		box-shadow: -2px 0 12px 12px $nav-color-shadow;
+		display: inline-block;
+	}
+	.container {
+		margin: 0px 10px;
+	}
+	.menu {
+		text-align: center;
+		display: flex;
+		a {
+			width: 100%;
+			padding: 15px 0px;
+			
+		}
+	}
+	.contact {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		font-size: 2em;
+	}
+
+}
+
+@include phone {
+	.row * img {
+		margin: auto;
+		display: block;
+		max-width: 100%;
+	}
+}
+
+
+// Normal
+
+
+.header {
+	margin: 30px 0px;
+	.avatar {
+		width: 150px;
+		max-width: 80%;
+		border-radius: 999px;
+		//border: 3px solid #682ffd8f;
+		margin: auto;
+		display: block;
+	}
+	.title, .subtitle {
+		color: $nav-color;
+		text-align: center;
+	}
+	.title {
+		font-size: 1.75em;
+	}
+}
+
+
+.menu {
+	a {
+		text-decoration: none;
+		color: white;
+		background-color: $nav-color-shadow;
+		transition: 0.5s;
+		animation-name: appear-menu;
+		animation-duration: 0.3s;
+		animation-timing-function: ease-out;
+	}
+	a:hover {
+		background-color: $nav-color-hover;
+		color: white;
+	}
+}
+
+.button-holder {
+	text-align: center;
+	.button {
+		padding: 10px 15px;
+		margin: 0px 5px;
+		text-decoration: none;
+		border-radius: 5px;
+		color: white;
+		transition: 0.5s;
+		white-space: nowrap;
+		line-height: 3em;
+		&.github-button {
+			background-color: rgb(77, 0, 112);
+			&:hover {
+				background-color: rgb(109, 0, 160);
+			}
+		}
+		&.play-button {
+			background-color: rgb(0, 119, 0);
+			&:hover {
+				background-color: rgb(0, 160, 0);
+			}
+		}
+
+	}
+}
+
+
+
+
+#project {
+	.row .column img {
+		border: solid 1px black;
+	}
+}
+
+.left-aligned {text-align: left;}
+a {
+	color: $main-color;
+	font-weight: bold;
+	&:hover {
+		color: $main-color-bright;
+	}
+}
+
+ul {
+	margin-top: 5px;
+}
+
+p {text-align: justify;}
+h1 {text-align: center;}
+body {
+	font-family: $font-default;
+	color: $main-color;
+}
+.container:not(.active) {
+	display: none;
+}
+hr { 
+	
+	border-color: #3100654a;
+}
+
+.contact-table {
+	width: 100%;
+	max-width: 1000px;
+}
+.contact-table * {
+    text-decoration: none;
+    font-weight: normal;
+	color: #310065;
+	& a:hover {
+		text-decoration: underline;
+	}
+}
+.fa-linkedin { color: $color-linkedin; }
+.fa-envelope-square { color: $color-mail;     }
+.fa-github-square	{ color: $color-github;   }
+.fa-linkedin:hover { color: $color-linkedin-hover; }
+.fa-envelope-square:hover { color: $color-mail-hover;     }
+.fa-github-square:hover   { color: $color-github-hover;   }

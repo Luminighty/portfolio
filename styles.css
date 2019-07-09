@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@media screen and (min-width: 800px) {
+  body {
+    background: linear-gradient(#ffffffdd, #ffffffdd), url("img/nav_bg.png");
+    background-attachment: fixed;
+    margin: 0px 0px 0px 350px; }
+  .navigator {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    bottom: 0px;
+    background: url("img/nav_bg.png");
+    background-attachment: fixed;
+    box-shadow: -2px 0 12px 12px #330b9a63;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .navigator::-webkit-scrollbar {
+      display: none; }
+  .menu a {
+    font-size: 1.2em;
+    display: block;
+    padding: 15px 50px;
+    text-align: left; }
+  .contact {
+    font-size: 2em;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #000020;
+    min-width: 350px;
+    max-width: 350px;
+    margin-top: 5px; } }
+  @media screen and (min-width: 800px) and (min-height: 500px) {
+    .contact {
+      position: absolute;
+      bottom: 0px;
+      left: 0px; } }
+
+@media screen and (min-width: 800px) {
+    .contact a {
+      padding: 0px 10px; }
+  .container {
+    padding: 10px 30px;
+    max-width: 1000px;
+    animation: containerShow 0.3s;
+    animation-timing-function: ease-out;
+    position: relative; } }
+
+@keyframes containerShow {
+  from {
+    opacity: 0;
+    top: -40px; }
+  to {
+    opacity: 100%;
+    top: 0px; } }
+
+@keyframes appear-menu {
+  from {
+    padding: 0;
+    background-color: transparent;
+    font-size: 1em; } }
+
+@media screen and (min-width: 500px) {
+  .column * {
+    width: 100%; }
+  .column.left-column {
+    float: left;
+    width: 48%; }
+  .column.right-column {
+    float: right;
+    width: 48%; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; } }
+
+@media screen and (max-width: 799px) {
+  body {
+    margin: 0px; }
+  .navigator {
+    width: 100%;
+    background: #000020;
+    box-shadow: -2px 0 12px 12px #330b9a63;
+    display: inline-block; }
+  .container {
+    margin: 0px 10px; }
+  .menu {
+    text-align: center;
+    display: flex; }
+    .menu a {
+      width: 100%;
+      padding: 15px 0px; }
+  .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em; } }
+
+@media screen and (max-width: 499px) {
+  .row * img {
+    margin: auto;
+    display: block;
+    max-width: 100%; } }
+
+.header {
+  margin: 30px 0px; }
+  .header .avatar {
+    width: 150px;
+    max-width: 80%;
+    border-radius: 999px;
+    margin: auto;
+    display: block; }
+  .header .title, .header .subtitle {
+    color: white;
+    text-align: center; }
+  .header .title {
+    font-size: 1.75em; }
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  background-color: #330b9a63;
+  transition: 0.5s;
+  animation-name: appear-menu;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out; }
+
+.menu a:hover {
+  background-color: #4301efba;
+  color: white; }
+
+.button-holder {
+  text-align: center; }
+  .button-holder .button {
+    padding: 10px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+    white-space: nowrap;
+    line-height: 3em; }
+    .button-holder .button.github-button {
+      background-color: #4d0070; }
+      .button-holder .button.github-button:hover {
+        background-color: #6d00a0; }
+    .button-holder .button.play-button {
+      background-color: #007700; }
+      .button-holder .button.play-button:hover {
+        background-color: #00a000; }
+
+#project .row .column img {
+  border: solid 1px black; }
+
+.left-aligned {
+  text-align: left; }
+
+a {
+  color: #310065;
+  font-weight: bold; }
+  a:hover {
+    color: #901cbf; }
+
+ul {
+  margin-top: 5px; }
+
+p {
+  text-align: justify; }
+
+h1 {
+  text-align: center; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #310065; }
+
+.container:not(.active) {
+  display: none; }
+
+hr {
+  border-color: #3100654a; }
+
+.contact-table {
+  width: 100%;
+  max-width: 1000px; }
+
+.contact-table * {
+  text-decoration: none;
+  font-weight: normal;
+  color: #310065; }
+  .contact-table * a:hover {
+    text-decoration: underline; }
+
+.fa-linkedin {
+  color: #6bc4f5; }
+
+.fa-envelope-square {
+  color: #f17c7c; }
+
+.fa-github-square {
+  color: #a163f1; }
+
+.fa-linkedin:hover {
+  color: #99feff; }
+
+.fa-envelope-square:hover {
+  color: #ffb1ad; }
+
+.fa-github-square:hover {
+  color: #d59bff; }
