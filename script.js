@@ -11,3 +11,9 @@ $(".menu").addEventListener("click", (e) => {
 		activeContainer.classList.add("active");
 	}
 });
+
+
+const age = new Date(Date.now() - new Date(1998, 09, 22).getTime()).getFullYear() - 1970;
+$$(".age").forEach(element => {
+	element.innerText = age;
+});
