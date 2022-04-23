@@ -31,35 +31,38 @@
 		</div>
 	</div>
 
+	<!-- ----------------------- -->
+	<!-- -------- ABOUT -------- -->
+	<!-- ----------------------- -->
 	<div class="container active" id="about">
 		<h1>About</h1>
-		<p>Hi, I'm a <span class="age">20</span> years old student who's really passionate about programming and especially game development. 
+		<p>Hi, I'm <span class="age"></span> years old, and really passionate about programming and especially game development. 
 			Recently I've graduated from Eötvös Loránd University where I studied Computer Science.</p>
 		<h2>Skills</h2>
 		<p>My current skillset includes a lot of different technologies I've achieved over almost a decade of learning 
 			and I'm eager to learn more things and get experience working on commercial projects.</p>
 		<hr>
 		<h3><i class="fa fa-wifi"></i> Web Development</h3>
-		Known Languages:
+		Technologies:
 		<ul>
 			<li>HTML</li>
 			<li>CSS/SCSS</li>
 			<li>JS</li>
-			<li>PHP</li>
-			<li>NodeJS</li>
+			<li>NodeJS / Express</li>
+			<li>Angular</li>
 			<li>React</li>
-			<li>Laravel</li>
+			<li>PHP / Laravel</li>
 		</ul>
 		<p>
 			I was interested in web development for a long time, and eventually managed to learn HTML, CSS and Javascript on my own. 
-			Later I've taken a lot of classes to further sharpen my skills.
-		</p>
-		<p>
-			In my last semester I finished Client-side web development and Server-side web development courses, 
-			where I've learned about and used React and Laravel.
+			Later I've taken a lot of classes to further sharpen my skills, for example during my last semester I've finished Client-side web development and Server-side web development courses, 
+			where I've learned about and used React, Angular, Laravel.
 		</p>
 		<p>
 			My thesis for university was a <a href="https://github.com/Luminighty/jelloscript" target="_blank">JavaScript Game Engine</a> made to be similar to Unity while using the strengths of JavaScript.
+		</p>
+		<p>
+			Lately I've been working on an <a href="https://github.com/Luminighty/online-cards" target="_blank">Online Tabletop</a> website, where I could play all kinds of board games with my friends using Socket.IO
 		</p>
 		<hr>
 		<h3><i class="fa fa-code"></i> Object-Oriented Programming</h3>
@@ -105,8 +108,62 @@
 		<p>I've learned SQL at the University last semester, while I'm self taught when it comes to Unity and Photoshop.</p>
 	</div>
 
+	<!-- -------------------------- -->
+	<!-- -------- PROJECTS -------- -->
+	<!-- -------------------------- -->
 	<div class="container" id="project">
 		<h1>Projects</h1>
+		<div class="row">
+			<div class="left-column column"><img src="img/projects/electronics.png" alt="Screenshot from Tank Battle"></div>
+			<div class="right-column column">
+				<h2>Electronics - MEAN Technologies</h2>
+				<p>As a side project, I've decided to create a fairly standard website for my CV using the 
+					technologies I've learned. (<b>M</b>ongoDB, <b>E</b>xpress, <b>A</b>ngular, <b>N</b>odeJS)</p>
+				<p>I'm really interested in electronics, so it felt fitting to develop a website where I can look up details on chips.</p>
+				<div class="button-holder">
+					<a class="github-button button" href="https://github.com/Luminighty/electronics" target="_blank">Github</a>
+					<a class="play-button button" href="" target="_blank">Try it out!</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="right-column column"><img src="img/projects/tabletop.png" alt="Screenshot from Tank Battle"></div>
+			<div class="left-column column">
+				<h2>Online Board Games</h2>
+				<p>
+					I like board games, and I've always wanted to play games online with my friends from all around the world. 
+					This is why I created this website for it, where I can load in new games easily, and we can have fun together.
+				</p>
+				<div>
+					Camera Controls:
+					<ul>
+						<li>Right Mouse Button - Move</li>
+						<li>Middle Mouse Button - Rotate</li>
+						<li>Scroll Wheel - Zoom</li>
+					</ul>
+				</div>
+				<p>Currently it requires a Discord account, since we're usually talking there.</p>
+				<div class="button-holder">
+					<a class="github-button button" href="https://github.com/Luminighty/online-cards" target="_blank">Github</a>
+					<a class="play-button button" href="https://lumi-online-tabletop.herokuapp.com/" target="_blank">Try it out!</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="left-column column"><img src="img/projects/penguin.png" alt="Screenshot from Tank Battle"></div>
+			<div class="right-column column">
+				<h2>Penguin Adventure</h2>
+				<p>A small game made using <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot</a> 
+					that I'm working on from time to time. My aim with it is to create a really smooth platforming experience for the players.</p>
+				<div class="button-holder">
+					<a class="github-button button" href="https://github.com/Luminighty/Penguin-Adventure" target="_blank">Github</a>
+					<a class="play-button button" href="" target="_blank">Try it out!</a>
+				</div>
+			</div>
+		</div>
+		<hr>
 		<div class="row">
 			<div class="right-column column"><img src="img/projects/spaceship.png" alt="Screenshot from Tank Battle"></div>
 			<div class="left-column column">
@@ -167,16 +224,22 @@
 		</div>
 	</div>
 
+	<!-- ---------------------- -->
+	<!-- -------- WORK -------- -->
+	<!-- ---------------------- -->
 	<div class="container timeline-container" id="work">
 		<h1>Work Experience</h1>
 		<ul class="timeline">
-			<li class="event" data-date="10/2020 - Now">
+			<li class="event" data-date="10/2020 - 10/2021">
 				<h3>Scala Backend Developer - Morgan Stanley</h3>
-				<p>I'm currently a Scala developer working in the RICE team (Risk Calculation Enviroment)</p>
+				<p>I was a Scala developer in the RICE team (Risk Calculation Environment). 
+					In short RICE is a strategic project, consolidating the firm's valuation, risk and profit & loss systems for all OTC cash and derivative positions.</p>
 				<div class="technology-container">
 					Technologies
 					<ul class="technologies">
 						<li>Scala</li>
+						<li>Scrum</li>
+						<li>JIRA</li>
 					</ul>
 				</div>
 			</li>
@@ -209,6 +272,9 @@
 		</ul>
 	</div>
 
+	<!-- ------------------------- -->
+	<!-- -------- CONTACT -------- -->
+	<!-- ------------------------- -->
 	<div class="container" id="contact">
 		<h1 class="left-aligned">Contact Me</h1>
 		<p>I'm open to any job offers, just send me an email or a message on linkedin.</p>

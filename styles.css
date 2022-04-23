@@ -366,4 +366,8 @@ hr {
   font-size: 0.75em;
 }
 
+a[href=""] {
+  display: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
